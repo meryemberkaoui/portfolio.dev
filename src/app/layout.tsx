@@ -6,6 +6,7 @@ import './globals.css';
 import Header from '@/components/layout/header';
 import { Providers } from '@/lib/providers';
 import Footer from '@/components/layout/footer';
+import type { Viewport } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,6 +14,13 @@ const title = 'Sagar Shah | Full Stack Developer From Ahmedabad, India.';
 const description =
   'A self-proclaimed designer who specializes in full stack development (React.js & Node.js), from Ahmedabad, India.';
 const url = 'https://sagarshah.dev';
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -25,10 +33,6 @@ export const metadata: Metadata = {
     'Next.js Developer',
   ],
   creator: 'Sagar Shah',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
   openGraph: {
     type: 'website',
     url,

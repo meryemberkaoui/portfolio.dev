@@ -1,12 +1,26 @@
-import { TECHNOLOGIES } from '@/lib/data';
+import { TECHNOLOGIES, SOFT_SKILLS } from '@/lib/data';
 import Tag from '@/components/data-display/tag';
 import TechDetails from '@/components/data-display/tech-details';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
+import SkillItem from '@/components/general/skill-item';
+
 
 const SkillsSection = () => {
+  const groupedTechnologies = TECHNOLOGIES.reduce((acc, tech) => {
+  if (!acc[tech.category]) {
+    acc[tech.category] = [];
+  }
+  acc[tech.category].push(tech);
+  return acc;
+  }, {} as Record<string, typeof TECHNOLOGIES>);
+
+  const categoryOrder = ['frontend', 'backend', 'database', 'devOps', 'testing','systems','management'];
+
+  
   return (
     <Container>
+      {/* Header */}
       <div className="flex flex-col items-center gap-4">
         <div className="self-center">
           <Tag label="Skills" />
@@ -16,10 +30,61 @@ const SkillsSection = () => {
         </Typography>
       </div>
 
-      <div className="grid grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-8 lg:gap-y-12">
-        {TECHNOLOGIES.map((technology, index) => (
-          <TechDetails {...technology} key={index} />
-        ))}
+      {/* Skills */}
+      <div className="mt-12 grid gap-12 md:grid-cols-[7fr_3fr]">
+        
+        {/* Hard Skills */}
+        <div>
+          <Typography variant="h3" className="mb-6 flex items-center gap-3">
+            <span className="h-3 w-3 rounded-full bg-gray-700" />
+            Hard Skills
+          </Typography>
+
+          <div className="flex flex-col gap-8">
+            {Object.entries(groupedTechnologies)
+            .sort((a, b) => categoryOrder.indexOf(a[0]) - categoryOrder.indexOf(b[0]))
+            .map(([category, techs]) => (
+              <div key={category} className="flex flex-col gap-4">
+                {/* Sous-catégorie */}
+                <Typography
+                className="font-semibold uppercase tracking-wide text-gray-600" >
+                  {category}
+                </Typography>
+                {/* Skills */}
+                <div className="flex flex-wrap gap-6">
+                  {techs.map((tech) => (
+                  <SkillItem
+                  key={tech.label}
+                  label={tech.label}
+                  logo={tech.logo}
+                  darkModeLogo={tech.darkModeLogo}
+                  />
+                ))}
+                </div>
+              </div>
+          ))}
+        </div>
+
+        </div>
+
+        {/* Soft Skills */}
+        <div>
+          <Typography variant="h3" className="mb-6 flex items-center gap-3">
+            <span className="h-3 w-3 rounded-full bg-gray-700" />
+            Soft Skills
+          </Typography>
+
+          <div className="flex flex-col gap-4">
+            {SOFT_SKILLS.map((skill) => (
+              <SkillItem
+                key={skill.label}
+                label={skill.label}
+                variant="soft"
+              />
+            ))}
+          </div>
+        </div>
+
       </div>
     </Container>
   );

@@ -4,7 +4,7 @@ export type TechDetails = {
   logo: string | StaticImageData;
   darkModeLogo?: string | StaticImageData;
   label: string;
-  url: string;
+  category: 'frontend' | 'backend' | 'database' | 'devOps' | 'management' | 'systems' |'testing';
 };
 
 export type ExperienceDetails = {
@@ -22,6 +22,7 @@ export type ProjectDetails = {
   name: string;
   description: string;
   url: string;
+  githubUrl?: string;
   previewImage: string | StaticImageData;
   technologies: string[];
 };
@@ -32,3 +33,8 @@ export type TestimonialDetails = {
   testimonial: string;
   title: string;
 };
+
+export type SoftSkill = {
+  label: string;
+};
+
