@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, GithubIcon } from 'lucide-react';
+import StatusBadge from '@/components/data-display/status-badge';
 
 import { ProjectDetails as ProjectDetailsType } from '@/lib/types';
 import { mergeClasses } from '@/lib/utils';
@@ -7,6 +8,7 @@ import Typography from '@/components/general/typography';
 import Link from '@/components/navigation/link';
 import Tag from '@/components/data-display/tag';
 import Card from '@/components/layout/card';
+import SkillItem from '../general/skill-item';
 
 type ProjectDetailsProps = ProjectDetailsType & {
   layoutType: 'default' | 'reverse';
@@ -17,7 +19,9 @@ const ProjectDetails = ({
   description,
   technologies,
   url,
+  githubUrl,
   previewImage,
+  status,
   layoutType = 'default',
 }: ProjectDetailsProps) => {
   return (
@@ -31,15 +35,14 @@ const ProjectDetails = ({
             : 'md:order-last md:rounded-r-xl md:border-l'
         )}
       >
-        <Link noCustomization href={url} externalLink>
-          <Image
+        { url &&<Link noCustomization href={url} externalLink />}
+        <Image
             src={previewImage}
             alt={`${name} preview`}
             fill
             className="rounded-xl shadow-lg transition-transform duration-500 md:hover:scale-105"
             style={{ objectFit: 'cover' }}
           />
-        </Link>
       </div>
 
       {/* Content */}
@@ -50,14 +53,25 @@ const ProjectDetails = ({
         )}
       >
         <Typography variant="subtitle" className="font-semibold text-gray-900">
-          {name}
+          {name} {status && <StatusBadge status={status} />}
+
         </Typography>
         <Typography>{description}</Typography>
         <div className="flex flex-wrap gap-2">
           {technologies?.map((technology, index) => (
-            <Tag key={index} label={technology} />
+            <SkillItem
+              key={index}
+              label={technology.label}
+              logo={technology.logo}
+              darkModeLogo={technology.darkModeLogo}
+              className="text-xs px-1.3 py-1"
+
+            />
           ))}
         </div>
+
+        <div className="flex items-center gap-3" >
+          {url &&
         <Link
           href={url}
           noCustomization
@@ -65,7 +79,19 @@ const ProjectDetails = ({
           externalLink
         >
           <ExternalLink />
-        </Link>
+        </Link> }
+
+        {githubUrl &&
+        <Link
+          href={githubUrl}
+          noCustomization
+          className="self-start rounded-lg p-1.5 hover:bg-gray-50 [&_svg]:stroke-gray-500"
+          externalLink
+        >
+          <GithubIcon />
+          
+        </Link> }
+        </div>
       </div>
     </Card>
   );

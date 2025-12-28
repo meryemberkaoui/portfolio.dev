@@ -52,7 +52,9 @@ const SkillsSection = () => {
                 </Typography>
                 {/* Skills */}
                 <div className="flex flex-wrap gap-6">
-                  {techs.map((tech) => (
+                  {techs
+                  .filter( (tech) => !['Prometheus', 'Grafana'].includes(tech.label))
+                  .map((tech) => (
                   <SkillItem
                   key={tech.label}
                   label={tech.label}

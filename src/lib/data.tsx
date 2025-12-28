@@ -18,7 +18,6 @@ export const EXTERNAL_LINKS = {
 export const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Work', href: '#work' },
-  { label: 'Testimonials', href: '#testimonials' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -61,16 +60,18 @@ export const TECHNOLOGIES: TechDetails[] = [
   {label:'SonarQube', logo: '/images/logos/icon-sonarqube.svg', category: 'devOps' },
   {label:'Scrum', logo: '/images/logos/icon-scrum.svg', category: 'management' },
   {label:'Oracle DB', logo: '/images/logos/icon-oracle.svg', category: 'database'},
+  {label:'Prometheus', logo: '/images/logos/icon-prometheus.svg', category: 'devOps'},
+  {label:'Grafana', logo: '/images/logos/icon-grafana.svg', category: 'devOps'},
 ];
 export const SOFT_SKILLS: SoftSkill[] = [
   { label: 'Teamwork' },
-  { label: 'Empathy' },
-  { label: 'Attention to detail' },
+  { label: 'Attention to detail'},
   { label: 'Adaptability' },
   { label: 'Problem-solving' },
   { label: 'Autonomous' },
   { label: 'Communication' },
   { label: 'Eager to learn' },
+  { label: 'Time management' },
 ];
 
 
@@ -117,10 +118,10 @@ export const PROJECTS: ProjectDetails[] = [
     name: 'DevPath',
     description:
     'A platform connecting developers with project opportunities to build their portfolios.Users can browse and join projects, create teams, share resources, and collaborate through forums, all while showcasing their skills to boost career opportunities.',
-    url: 'https://www.wingie.com',
     githubUrl: 'https://github.com/meryemberkaoui/devpath',
     previewImage: '/images/project-devpath.png',
-    technologies: ['React', 'Typescript', 'React Bootstrap', 'Spring Boot', 'PostgreSQL'],
+    technologies: [TECHNOLOGIES.find(t => t.label === 'React'), TECHNOLOGIES.find(t => t.label === 'Typescript'), TECHNOLOGIES.find(t => t.label === 'React Bootstrap'), TECHNOLOGIES.find(t => t.label === 'Spring Boot'), TECHNOLOGIES.find(t => t.label === 'PostgreSQL')].filter(Boolean) as TechDetails[],
+    status: 'in-progress',
   },
   {
     name: 'Hackathon',
@@ -128,7 +129,24 @@ export const PROJECTS: ProjectDetails[] = [
     'A platform connecting developers with project opportunities to build their portfolios.Users can browse and join projects, create teams, share resources, and collaborate through forums, all while showcasing their skills to boost career opportunities.',
     url: 'https://www.wingie.com',
     previewImage: '/images/project-hackathon.png',
-    technologies: ['Vue.js', 'Spring Boot', 'GitLab', 'PostgreSQL', 'Docker','Prometheus', 'Grafana'],
+    technologies: [TECHNOLOGIES.find(t => t.label === 'Vue.js'), TECHNOLOGIES.find(t => t.label === 'Spring Boot'), TECHNOLOGIES.find(t => t.label === 'GitLab'), TECHNOLOGIES.find(t => t.label === 'PostgreSQL'), TECHNOLOGIES.find(t => t.label === 'Docker'), TECHNOLOGIES.find(t => t.label === 'Prometheus'), TECHNOLOGIES.find(t => t.label === 'Grafana'),
+    ].filter(Boolean) as TechDetails[],
+  },
+  {
+    name: 'My Portfolio',
+    description:'Personal portfolio',
+    url: 'https://meryemberkaoui.dev',
+    githubUrl: 'https://github.com/meryemberkaoui/portfolio.dev',
+    previewImage: '/images/project-portfolio.png',
+    technologies: [TECHNOLOGIES.find(t => t.label === 'Next.js'), TECHNOLOGIES.find(t => t.label === 'Typescript'), TECHNOLOGIES.find(t => t.label === 'Tailwindcss')].filter(Boolean) as TechDetails[],
+
+  },
+  {
+    name: 'food website',
+    description:'A food website project',
+    previewImage: '/images/project-food.png',
+    technologies: [],
+    status: 'coming-soon',
   }
 ];
 

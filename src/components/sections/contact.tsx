@@ -13,7 +13,6 @@ import useWindowSize from '@/hooks/use-window-size';
 import { copyTextToClipboard } from '@/lib/utils';
 
 let email = 'meryem.berkaoui20@gmail.com';
-let phone = '+33 611812110';
 
 type CopyValue = 'email' | 'phone';
 
@@ -42,7 +41,7 @@ const ContactSection = () => {
   };
 
   return (
-    <Container id="contact">
+    <Container id="contact" className="bg-gray-50">
       <div className="flex flex-col items-center gap-4">
         <div className="self-center">
           <Tag label="Get in touch" />
@@ -64,20 +63,6 @@ const ContactSection = () => {
               size={width && width < 768 ? 'md' : 'lg'}
               onClick={() => handleCopyClick(email, 'email')}
               showTooltip={isCopied && copiedValueType === 'email'}
-              tooltipText="Copied!"
-            >
-              <Copy />
-            </IconButton>
-          </div>
-          <div className="flex items-center gap-4 md:gap-5">
-            <Phone className="h-6 w-6 md:h-8 md:w-8" />
-            {/* <Link href={`tel:${phone.replace(' ', '')}`}> */}
-            <Typography variant="h2">{phone}</Typography>
-            {/* </Link> */}
-            <IconButton
-              size={width && width < 768 ? 'md' : 'lg'}
-              onClick={() => handleCopyClick(phone.replace(' ', ''), 'phone')}
-              showTooltip={isCopied && copiedValueType === 'phone'}
               tooltipText="Copied!"
             >
               <Copy />

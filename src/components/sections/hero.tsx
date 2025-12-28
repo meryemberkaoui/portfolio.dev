@@ -31,11 +31,21 @@ const HeroSection = () => {
               <span className="inline-block animate-waving-hand">👋</span>
             </Typography>
             <Typography>
-              Motivated and detail-oriented Full-Stack Developer with 2 years of work-study experience, committed to delivering high-quality solutions. I&apos;m eager to leverage my technical skills in impactful projects, grow within a dynamic and collaborative environment, and contribute to innovative, high-value initiatives.
+              I&apos;m a full-Stack developer with 2 years of work-study experience, committed to delivering high-quality solutions. I&apos;m eager to leverage my technical skills in impactful projects, grow within a dynamic and collaborative environment, and contribute to innovative, high-value initiatives.
             </Typography>
-            <Typography>
-              Spoken languages: French, English, Arabic.
-            </Typography>
+            <div className="mt-10">
+              <Typography className="text-lg">
+                
+                <span className="flex items-center gap-2 ml-2">
+                  <span className="font-bold text-gray-600">SPOKEN LANGUAGES:</span>{' '}
+                  <span>French</span>
+                  <span className="w-2 h-2 mx-2 bg-gray-400 rounded-full"></span>
+                  <span>English</span>
+                  <span className="w-2 h-2 mx-2 bg-gray-400 rounded-full"></span>
+                  <span>Arabic</span>
+                </span>
+              </Typography>
+            </div> 
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex gap-2">
@@ -54,8 +64,8 @@ const HeroSection = () => {
                 <span className="inline-block animate-waving-hand">🙂</span>
               </Typography>
             </div>
+            <SocialIcons />
           </div>
-          <SocialIcons />
         </div>
       </div>
     </Container>

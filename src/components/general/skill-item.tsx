@@ -11,6 +11,7 @@ type SkillItemProps = {
   logo?: TechDetails['logo'];
   darkModeLogo?: string | StaticImageData;
   variant?: 'hard' | 'soft';
+  className?: string; 
 };
 
 export default function SkillItem({
@@ -18,18 +19,21 @@ export default function SkillItem({
   logo,
   darkModeLogo,
   variant = 'hard',
+  className,
 }: SkillItemProps) {
   const isSoft = variant === 'soft';
 
   const { theme } = useTheme();
-  const logoToUse = theme === 'dark' ? darkModeLogo || logo : logo || darkModeLogo;
+  const currentTheme = theme || 'light';
+  const logoToUse = currentTheme === 'dark' ? darkModeLogo || logo : logo || darkModeLogo;
 
 
   return (
     <div
       className={`flex items-center gap-3 rounded-xl border px-4 py-3 text-sm font-medium
            border-gray-20 text-gray-900 
-           ${isSoft ? 'w-fit self-start' : ''}`}
+           ${isSoft ? 'w-fit self-start' : ''}
+           ${className ?? ''}`}
     >
       {logoToUse && (
         <Image

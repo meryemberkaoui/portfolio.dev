@@ -10,9 +10,9 @@ import type { Viewport } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const title = 'Sagar Shah | Full Stack Developer From Ahmedabad, India.';
+const title = 'Meryem Berkaoui | Full Stack Developer.';
 const description =
-  'A self-proclaimed designer who specializes in full stack development (React.js & Node.js), from Ahmedabad, India.';
+  'Full stack development (Angular & Spring Boot).';
 const url = 'https://sagarshah.dev';
 
 export const viewport: Viewport = {
