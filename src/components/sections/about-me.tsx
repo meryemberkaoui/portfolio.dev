@@ -1,12 +1,19 @@
+'use client';
+
 import Image from 'next/image';
 
 import Tag from '@/components/data-display/tag';
 import Container from '@/components/layout/container';
 import Typography from '@/components/general/typography';
-import Link from '@/components/navigation/link';
-import { EXTERNAL_LINKS } from '@/lib/data';
+
+import { useLanguage } from '@/app/language-context';
+import * as EN from '@/lib/data.en';
+import * as FR from '@/lib/data.fr';
 
 const AboutMeSection = () => {
+  const { language } = useLanguage();
+  const data = language === 'en' ? EN : FR;
+
   return (
     <Container className="bg-gray-50" id="about">
       <div className="self-center">
@@ -31,34 +38,36 @@ const AboutMeSection = () => {
         {/* Content */}
         <div className="flex max-w-xl flex-col gap-6">
           <Typography variant="h3">
-            Curious about me? Here you have it:
+            {data.ABOUT_ME.title}
           </Typography>
           <Typography>
-            I&apos;m a passionate Full Stack Developer specializing in Angular and Spring Boot, with a strong interest in bringing both the technical and visual aspects of digital products to life. User experience, clean architecture, and writing clear, readable, and high-performance code are things I deeply care about.
+            {data.ABOUT_ME.description[0]}
           </Typography>
           <Typography>
-            I began my professional journey as a software developer apprentice in 2023, where I had the opportunity to contribute to several stimulating projects alongside passionate and supportive teams. This experience allowed me to enter and better understand the professional world, learning how to collaborate, share knowledge, and especially how to continuously grow, both technically and personally.
+            {data.ABOUT_ME.description[1]}
           </Typography>
           <Typography>
-            Outside of development, I enjoy staying active through regular sports, long walks, and discovering beautiful natural landscapes. I&apos;ve also recently developed a passion for cooking. I love recreating recipes, baking cakes, and sharing them with others.
+            {data.ABOUT_ME.description[2]}
           </Typography>
           <Typography>
-            Some quick bits about me :
+            {data.ABOUT_ME.description[3]}
           </Typography>
           <div className="flex flex-col gap-2 md:flex-row md:gap-6">
             <ul className="flex list-inside list-disc flex-col gap-2">
               <Typography component="li">
-                Master&apos;s degree in Software Engineering
+                {data.ABOUT_ME.description[4]}
               </Typography>
-              <Typography component="li">Rigorous and detail-oriented</Typography>
+              <Typography component="li">{data.ABOUT_ME.description[5]}</Typography>
             </ul>
             <ul className="flex list-inside list-disc flex-col gap-2">
-              <Typography component="li">Avid learner</Typography>
-              <Typography component="li">Enjoy connecting and collaborating with people</Typography>
+              <Typography component="li">{data.ABOUT_ME.description[6]}</Typography>
+              <Typography component="li">{data.ABOUT_ME.description[7]}</Typography>
             </ul>
           </div>
           <Typography>
-            After earning my Master&apos;s degree in Software Engineering, I am now seeking new challenges and opportunities to build innovative applications using modern technologies. <br />If you are looking for a motivated developer with strong fundamentals, a genuine commitment to continuous learning, and someone ready to take on new responsibilities, I would be happy to discuss how I can contribute to your team. 😉
+            {data.ABOUT_ME.description[8]}
+            <br/>
+            {data.ABOUT_ME.description[9]}
           </Typography>
         </div>
       </div>

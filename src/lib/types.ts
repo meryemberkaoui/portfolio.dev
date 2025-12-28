@@ -25,7 +25,7 @@ export type ProjectDetails = {
   githubUrl?: string;
   previewImage: string | StaticImageData;
   technologies: TechDetails[];
-  status?: 'in-progress' | 'coming-soon' | undefined;
+  status?: 'in-progress' | 'coming-soon' | 'en cours' | 'à venir' | undefined;
 };
 
 export type TestimonialDetails = {
@@ -39,3 +39,14 @@ export type SoftSkill = {
   label: string;
 };
 
+export type AboutMe = {
+  title : string;
+  description : string[];
+};
+
+export type Hero = {
+  hi : string;
+  presentation : string;
+  languages : string[];
+  availability : string;
+};

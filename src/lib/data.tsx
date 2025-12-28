@@ -1,11 +1,10 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 import {
-  ExperienceDetails,
-  ProjectDetails,
   TechDetails,
-  TestimonialDetails, 
-  SoftSkill,
+  TestimonialDetails,
+  ExperienceDetails,
+  ProjectDetails
 } from '@/lib/types';
 
 export const EXTERNAL_LINKS = {
@@ -14,12 +13,6 @@ export const EXTERNAL_LINKS = {
   FIGMA_FILE:
     'https://www.figma.com/community/file/1262992249991763120/Personal-Portfolio-Website-Template-%7C-Mobile-%26-Desktop',
 };
-
-export const NAV_LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Work', href: '#work' },
-  { label: 'Contact', href: '#contact' },
-];
 
 export const SOCIAL_LINKS = [
   { icon: Github, url: 'https://github.com/meryemberkaoui' },
@@ -62,94 +55,67 @@ export const TECHNOLOGIES: TechDetails[] = [
   {label:'Oracle DB', logo: '/images/logos/icon-oracle.svg', category: 'database'},
   {label:'Prometheus', logo: '/images/logos/icon-prometheus.svg', category: 'devOps'},
   {label:'Grafana', logo: '/images/logos/icon-grafana.svg', category: 'devOps'},
-];
-export const SOFT_SKILLS: SoftSkill[] = [
-  { label: 'Teamwork' },
-  { label: 'Attention to detail'},
-  { label: 'Adaptability' },
-  { label: 'Problem-solving' },
-  { label: 'Autonomous' },
-  { label: 'Communication' },
-  { label: 'Eager to learn' },
-  { label: 'Time management' },
+  {label:'Radix IU', logo: '/images/logos/icon-radix.svg', category: 'frontend', darkModeLogo:'/images/logos/icon-radix-light.svg' },
 ];
 
 
-export const EXPERIENCES: ExperienceDetails[] = [
+export const EXPERIENCES_SHARED: Omit<ExperienceDetails, 'position' | 'summary'>[] = [
   {
     logo: '/images/logos/Capgemini_Logo.svg',
     logoAlt: 'Capgemini logo',
-    position: 'Software developer - Angular/Spring Boot Project',
+    
     startDate: new Date(2024, 8),
     endDate: new Date(2025, 7),
-    summary: [
-      'Developed and maintained backend services using Spring Boot',
-      'Built and maintained frontend components using Angular',
-      'Implemented and manageed OJS storage',
-      'Estimated feature complexity and contributed to sprint planning',
-      'Designed, implemented, and maintained CI/CD pipelines using GitLab',
-      'Participated in code reviews and quality checks using SonarQube and Semgrep',
-      'Wrote and validated unit tests with JUnit and Mockito',
-      'Presented product demonstrations to clients and stakeholders',
-      'Worked in a Scrum environment, supported by an Agile coach',
-    ],
   },
   {
     logo: '/images/logos/Capgemini_Logo.svg',
     logoAlt: 'Capgemini logo',
-    position: 'Software developer - Number Portability Server Project',
     startDate: new Date(2023, 8),
     endDate: new Date(2024, 7),
-    summary: [
-      'Developed backend features using Java and Python',
-      'Wrote and optimized PostgreSQL queries',
-      'Conducted integration tests and validated results using HP-ALM',
-      'Developed 75 automated functional tests using JMeter, building a library of reusable test components to improve efficiencyand maintainability',
-      'Drafted and updated specifications delivered to clients',
-      'Implemented and managed CI/CD pipelines using Jenkins',
-      'Worked in a V-model development cycle',
-      
-    ],
   }
 ];
 
-export const PROJECTS: ProjectDetails[] = [
+export const PROJECTS_SHARED: Omit<ProjectDetails, 'name' | 'description'>[] = [
   {
-    name: 'DevPath',
-    description:
-    'A platform connecting developers with project opportunities to build their portfolios.Users can browse and join projects, create teams, share resources, and collaborate through forums, all while showcasing their skills to boost career opportunities.',
     githubUrl: 'https://github.com/meryemberkaoui/devpath',
     previewImage: '/images/project-devpath.png',
-    technologies: [TECHNOLOGIES.find(t => t.label === 'React'), TECHNOLOGIES.find(t => t.label === 'Typescript'), TECHNOLOGIES.find(t => t.label === 'React Bootstrap'), TECHNOLOGIES.find(t => t.label === 'Spring Boot'), TECHNOLOGIES.find(t => t.label === 'PostgreSQL')].filter(Boolean) as TechDetails[],
+    technologies: [
+      TECHNOLOGIES.find(t => t.label === 'React'),
+      TECHNOLOGIES.find(t => t.label === 'Typescript'),
+      TECHNOLOGIES.find(t => t.label === 'React Bootstrap'),
+      TECHNOLOGIES.find(t => t.label === 'Spring Boot'),
+      TECHNOLOGIES.find(t => t.label === 'PostgreSQL'),
+    ].filter(Boolean) as TechDetails[],
     status: 'in-progress',
   },
   {
-    name: 'Hackathon',
-    description:
-    'A platform connecting developers with project opportunities to build their portfolios.Users can browse and join projects, create teams, share resources, and collaborate through forums, all while showcasing their skills to boost career opportunities.',
     url: 'https://www.wingie.com',
     previewImage: '/images/project-hackathon.png',
-    technologies: [TECHNOLOGIES.find(t => t.label === 'Vue.js'), TECHNOLOGIES.find(t => t.label === 'Spring Boot'), TECHNOLOGIES.find(t => t.label === 'GitLab'), TECHNOLOGIES.find(t => t.label === 'PostgreSQL'), TECHNOLOGIES.find(t => t.label === 'Docker'), TECHNOLOGIES.find(t => t.label === 'Prometheus'), TECHNOLOGIES.find(t => t.label === 'Grafana'),
+    technologies: [
+      TECHNOLOGIES.find(t => t.label === 'Vue.js'),
+      TECHNOLOGIES.find(t => t.label === 'Spring Boot'),
+      TECHNOLOGIES.find(t => t.label === 'GitLab'),
+      TECHNOLOGIES.find(t => t.label === 'PostgreSQL'),
+      TECHNOLOGIES.find(t => t.label === 'Docker'),
+      TECHNOLOGIES.find(t => t.label === 'Prometheus'),
+      TECHNOLOGIES.find(t => t.label === 'Grafana'),
     ].filter(Boolean) as TechDetails[],
   },
   {
-    name: 'My Portfolio',
-    description:'Personal portfolio',
     url: 'https://meryemberkaoui.dev',
     githubUrl: 'https://github.com/meryemberkaoui/portfolio.dev',
     previewImage: '/images/project-portfolio.png',
-    technologies: [TECHNOLOGIES.find(t => t.label === 'Next.js'), TECHNOLOGIES.find(t => t.label === 'Typescript'), TECHNOLOGIES.find(t => t.label === 'Tailwindcss')].filter(Boolean) as TechDetails[],
-
+    technologies: [
+      TECHNOLOGIES.find(t => t.label === 'Next.js'),
+      TECHNOLOGIES.find(t => t.label === 'Typescript'),
+      TECHNOLOGIES.find(t => t.label === 'Tailwindcss'),
+    ].filter(Boolean) as TechDetails[],
   },
   {
-    name: 'food website',
-    description:'A food website project',
     previewImage: '/images/project-food.png',
     technologies: [],
     status: 'coming-soon',
-  }
+  },
 ];
 
-export const TESTIMONIALS: TestimonialDetails[] = [
- 
-];
+export const TESTIMONIALS: TestimonialDetails[] = [];

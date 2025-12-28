@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 
@@ -5,7 +7,14 @@ import SocialIcons from '@/components/data-display/social-icons';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
 
+import { useLanguage } from '@/app/language-context';
+import * as EN from '@/lib/data.en';
+import * as FR from '@/lib/data.fr';
+
 const HeroSection = () => {
+  const { language } = useLanguage();
+  const data = language === 'en' ? EN : FR;
+
   return (
     <Container id="hero">
       <div className="flex flex-col gap-12 md:flex-row">
@@ -14,7 +23,7 @@ const HeroSection = () => {
           <div className="relative isolate h-[300px] w-[280px] md:h-[360px] md:w-[320px]">
             <Image
               src="/images/meryem-headshot.jpg"
-              alt="Headshot of Sagar"
+              alt="Headshot of Meryem"
               fill
               className="absolute z-10 h-[280px] w-[240px] border-8 border-gray max-md:left-5 md:left-0 md:top-0 md:h-[320px] md:w-[280px]"
               style={{ objectFit: 'cover' }}
@@ -27,22 +36,22 @@ const HeroSection = () => {
         <div className="flex max-w-3xl flex-grow flex-col justify-center gap-8 md:order-first md:items-start md:justify-center 2xl:gap-12">
           <div className="flex flex-col gap-2">
             <Typography variant="h1">
-              Hi, I&apos;m Meryem{' '}
+              {data.HERO.hi}{' '}
               <span className="inline-block animate-waving-hand">👋</span>
             </Typography>
             <Typography>
-              I&apos;m a full-Stack developer with 2 years of work-study experience, committed to delivering high-quality solutions. I&apos;m eager to leverage my technical skills in impactful projects, grow within a dynamic and collaborative environment, and contribute to innovative, high-value initiatives.
+              {data.HERO.presentation}
             </Typography>
             <div className="mt-10">
               <Typography className="text-lg">
                 
                 <span className="flex items-center gap-2 ml-2">
-                  <span className="font-bold text-gray-600">SPOKEN LANGUAGES:</span>{' '}
-                  <span>French</span>
+                  <span className="font-bold text-gray-600">{data.HERO.languages[0]}:</span>{' '}
+                  <span>{data.HERO.languages[1]}</span>
                   <span className="w-2 h-2 mx-2 bg-gray-400 rounded-full"></span>
-                  <span>English</span>
+                  <span>{data.HERO.languages[2]}</span>
                   <span className="w-2 h-2 mx-2 bg-gray-400 rounded-full"></span>
-                  <span>Arabic</span>
+                  <span>{data.HERO.languages[3]}</span>
                 </span>
               </Typography>
             </div> 
@@ -60,7 +69,7 @@ const HeroSection = () => {
                   <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500"></span>
                 </span>
               </div>
-              <Typography>Ready to join your team{' '}
+              <Typography>{data.HERO.availability}{' '}
                 <span className="inline-block animate-waving-hand">🙂</span>
               </Typography>
             </div>

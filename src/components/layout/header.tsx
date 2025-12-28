@@ -9,7 +9,6 @@ import {
   DrawerContent,
   DrawerClose,
 } from '@/components/navigation/drawer';
-import { NAV_LINKS } from '@/lib/data';
 import { mergeClasses } from '@/lib/utils';
 import useWindowSize from '@/hooks/use-window-size';
 import useScroll from '@/hooks/use-scroll';
@@ -18,6 +17,11 @@ import ThemeSwitcher from '@/components/general/theme-switcher';
 import IconButton from '@/components/general/icon-button';
 import DownloadCV from '@/components/general/download-cv';
 import Typography from '@/components/general/typography';
+import LanguageSwitcher from '../general/language-switcher';
+
+import { useLanguage } from '@/app/language-context';
+import * as EN from '@/lib/data.en';
+import * as FR from '@/lib/data.fr';
 
 const Logo = () => (
   <Typography variant="h3" className="font-bold">
@@ -26,6 +30,9 @@ const Logo = () => (
 );
 
 const Header = () => {
+  const { language } = useLanguage();
+  const data = language === 'en' ? EN : FR;
+
   const scrolled = useScroll(40);
   const [isOpen, setIsOpen] = useState(false);
   const size = useWindowSize();
@@ -50,7 +57,7 @@ const Header = () => {
         </Link>
         <div className="hidden items-center gap-6 md:flex">
           <ul className="flex list-none items-center gap-6">
-            {NAV_LINKS.map((link, index) => (
+            {data.NAV_LINKS.map((link, index) => (
               <li key={index}>
                 <Link href={link.href}>{link.label}</Link>
               </li>
@@ -59,7 +66,9 @@ const Header = () => {
           <div className="h-6 w-0.5 bg-gray-100"></div>
           <div className="flex items-center gap-4">
             <ThemeSwitcher />
+            <LanguageSwitcher />
             <DownloadCV />
+            
           </div>
         </div>
 
@@ -80,7 +89,7 @@ const Header = () => {
             </div>
             <div className="border-b border-gray-100 p-4">
               <ul className="flex list-none flex-col gap-4">
-                {NAV_LINKS.map((link, index) => (
+                {data.NAV_LINKS.map((link, index) => (
                   <li key={index}>
                     <Link
                       href={link.href}

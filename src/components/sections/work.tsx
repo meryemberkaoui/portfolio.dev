@@ -1,10 +1,18 @@
-import { PROJECTS } from '@/lib/data';
+'use client';
+
 import ProjectDetails from '@/components/data-display/project-details';
 import Tag from '@/components/data-display/tag';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
 
+import { useLanguage } from '@/app/language-context';
+import * as EN from '@/lib/data.en';
+import * as FR from '@/lib/data.fr';
+
 const WorkSection = () => {
+  const { language } = useLanguage();
+  const data = language === 'en' ? EN : FR;
+
   return (
     <Container id="work">
       <div className="flex flex-col items-center gap-4">
@@ -16,7 +24,7 @@ const WorkSection = () => {
         </Typography>
       </div>
 
-      {PROJECTS?.map((project, index) => (
+      {data.PROJECTS?.map((project, index) => (
         <ProjectDetails
           key={index}
           {...project}

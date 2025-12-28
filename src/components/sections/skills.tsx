@@ -1,12 +1,20 @@
-import { TECHNOLOGIES, SOFT_SKILLS } from '@/lib/data';
+'use client';
+
+import { TECHNOLOGIES } from '@/lib/data';
 import Tag from '@/components/data-display/tag';
-import TechDetails from '@/components/data-display/tech-details';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
 import SkillItem from '@/components/general/skill-item';
 
+import { useLanguage } from '@/app/language-context';
+import * as EN from '@/lib/data.en';
+import * as FR from '@/lib/data.fr';
 
 const SkillsSection = () => {
+  
+  const { language } = useLanguage();
+  const data = language === 'en' ? EN : FR;
+  
   const groupedTechnologies = TECHNOLOGIES.reduce((acc, tech) => {
   if (!acc[tech.category]) {
     acc[tech.category] = [];
@@ -77,7 +85,7 @@ const SkillsSection = () => {
           </Typography>
 
           <div className="flex flex-col gap-4">
-            {SOFT_SKILLS.map((skill) => (
+            {data.SOFT_SKILLS.map((skill) => (
               <SkillItem
                 key={skill.label}
                 label={skill.label}

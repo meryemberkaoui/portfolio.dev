@@ -7,6 +7,7 @@ import Header from '@/components/layout/header';
 import { Providers } from '@/lib/providers';
 import Footer from '@/components/layout/footer';
 import type { Viewport } from 'next';
+import { LanguageProvider } from './language-context';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -87,9 +88,11 @@ export default function RootLayout({
       ) : null}
       <body className={`${inter.className} bg-gray text-gray-600 antialiased`}>
         <Providers>
-          <Header />
-          <main className="flex min-h-screen w-full flex-col">{children}</main>
-          <Footer />
+          <LanguageProvider>
+            <Header />
+            <main className="flex min-h-screen w-full flex-col">{children}</main>
+            <Footer />
+          </LanguageProvider>
         </Providers>
       </body>
     </html>
