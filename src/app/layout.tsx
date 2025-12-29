@@ -35,18 +35,14 @@ export const metadata: Metadata = {
     'Angular Developer',
     'Spring Boot Developer',
   ],
-  creator: 'Sagar Shah',
+  creator: 'Meryem Berkaoui',
   openGraph: {
     type: 'website',
     url,
     title,
     description,
     siteName: title,
-    images: [
-      {
-        url: '/images/open-graph-sagar.png',
-      },
-    ],
+    images: [],
   },
   icons: {
     icon: '/favicon.ico',
