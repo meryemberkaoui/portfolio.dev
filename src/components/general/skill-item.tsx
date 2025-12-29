@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { TechDetails } from '@/lib/types';
 import { useTheme } from 'next-themes';
 import type { StaticImageData } from 'next/image';
+import { useEffect, useState } from 'react';
+
 
 
 type SkillItemProps = {
@@ -23,9 +25,14 @@ export default function SkillItem({
 }: SkillItemProps) {
   const isSoft = variant === 'soft';
 
-  const { theme } = useTheme();
-  const currentTheme = theme || 'light';
-  const logoToUse = currentTheme === 'dark' ? darkModeLogo || logo : logo || darkModeLogo;
+  const { theme } = useTheme();  
+  const [logoToUse, setLogoToUse] = useState<string | StaticImageData | undefined>(logo);
+
+  useEffect(() => {
+    if (theme) {
+      setLogoToUse(theme === 'dark' ? darkModeLogo || logo : logo || darkModeLogo);
+    }
+  }, [theme, logo, darkModeLogo]);
 
 
   return (

@@ -25,7 +25,7 @@ import * as FR from '@/lib/data.fr';
 
 const Logo = () => (
   <Typography variant="h3" className="font-bold">
-    {'<SS />'}
+    {'<MB />'}
   </Typography>
 );
 

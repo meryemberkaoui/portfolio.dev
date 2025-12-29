@@ -7,13 +7,6 @@ import {
   ProjectDetails
 } from '@/lib/types';
 
-export const EXTERNAL_LINKS = {
-  GITHUB: 'https://github.com/shahsagarm',
-  GITHUB_REPO: 'https://github.com/shahsagarm/sagarshah.dev',
-  FIGMA_FILE:
-    'https://www.figma.com/community/file/1262992249991763120/Personal-Portfolio-Website-Template-%7C-Mobile-%26-Desktop',
-};
-
 export const SOCIAL_LINKS = [
   { icon: Github, url: 'https://github.com/meryemberkaoui' },
   { icon: Linkedin, url: 'https://www.linkedin.com/in/meryem-berkaoui-02a952260' },

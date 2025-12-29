@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ['latin'] });
 const title = 'Meryem Berkaoui | Full Stack Developer.';
 const description =
   'Full stack development (Angular & Spring Boot).';
-const url = 'https://sagarshah.dev';
+const url = 'https://meryemberkaoui.dev';
 
 export const viewport: Viewport = {
   themeColor: [
@@ -32,6 +32,8 @@ export const metadata: Metadata = {
     'Full Stack Developer',
     'React Developer',
     'Next.js Developer',
+    'Angular Developer',
+    'Spring Boot Developer',
   ],
   creator: 'Sagar Shah',
   openGraph: {
@@ -45,13 +47,6 @@ export const metadata: Metadata = {
         url: '/images/open-graph-sagar.png',
       },
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title,
-    description,
-    creator: '@shahsagarm',
-    images: '/images/open-graph-sagar.png',
   },
   icons: {
     icon: '/favicon.ico',
