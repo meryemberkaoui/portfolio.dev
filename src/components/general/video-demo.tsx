@@ -27,10 +27,12 @@ const VideoDemo = ({ videoSrc, buttonLabel }: VideoDemoProps) => {
         <Dialog.Overlay asChild>
           <div className="fixed inset-0 bg-black/50" />
         </Dialog.Overlay>
-
+          
         <Dialog.Content asChild>
+          
           <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
                           bg-white rounded-lg p-4 max-w-3xl w-full shadow-lg">
+            <Dialog.Title></Dialog.Title>
             <Dialog.Close className="absolute top-0 right-1 text-red-700 font-bold text-3xl">
               ×
             </Dialog.Close>
