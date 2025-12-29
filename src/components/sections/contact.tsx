@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Copy, Mail, Phone } from 'lucide-react';
+import { Copy, Mail } from 'lucide-react';
 // import Link from 'next/link';
 
 import SocialIcons from '@/components/data-display/social-icons';
@@ -12,11 +12,18 @@ import Container from '@/components/layout/container';
 import useWindowSize from '@/hooks/use-window-size';
 import { copyTextToClipboard } from '@/lib/utils';
 
+import { useLanguage } from '@/app/language-context';
+import * as EN from '@/lib/data.en';
+import * as FR from '@/lib/data.fr';
+
 let email = 'meryem.berkaoui20@gmail.com';
 
 type CopyValue = 'email' | 'phone';
 
 const ContactSection = () => {
+  const { language } = useLanguage();
+  const data = language === 'en' ? EN : FR;
+
   const { width } = useWindowSize();
   const [isCopied, setIsCopied] = useState(false);
   const [copiedValueType, setCopiedValueType] = useState<CopyValue | null>(
@@ -44,11 +51,10 @@ const ContactSection = () => {
     <Container id="contact" className="bg-gray-50">
       <div className="flex flex-col items-center gap-4">
         <div className="self-center">
-          <Tag label="Get in touch" />
+          <Tag label={data.SECTIONS.contact.name} />
         </div>
         <Typography variant="subtitle" className="max-w-xl text-center">
-          What’s next? Feel free to reach out to me if you are looking for a
-          developer, have a query, or simply want to connect.
+          {data.SECTIONS.contact.description}
         </Typography>
       </div>
 
@@ -71,7 +77,7 @@ const ContactSection = () => {
         </div>
         <div className="flex flex-col items-center gap-2">
           <Typography className="text-center">
-            You may also find me on these platforms!
+            {data.SECTIONS.contact.text[0]}
           </Typography>
           <SocialIcons />
         </div>

@@ -31,10 +31,10 @@ const SkillsSection = () => {
       {/* Header */}
       <div className="flex flex-col items-center gap-4">
         <div className="self-center">
-          <Tag label="Skills" />
+          <Tag label={data.SECTIONS.skills.name} />
         </div>
         <Typography variant="subtitle" className="max-w-xl text-center">
-          The skills, tools and technologies I am really good at:
+          {data.SECTIONS.skills.description}
         </Typography>
       </div>
 

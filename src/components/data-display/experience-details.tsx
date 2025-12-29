@@ -17,6 +17,7 @@ const ExperienceDetails = ({
   startDate,
   endDate,
   summary,
+  localDate
 }: ExperienceDetailsProps) => {
   return (
     <Card className="mx-auto flex w-full flex-col justify-between gap-6 p-8 md:flex-row md:gap-8">
@@ -40,16 +41,16 @@ const ExperienceDetails = ({
           ))}
         </ul>
       </div>
-      <div className="max-md:order-2 md:w-1/4">
+      <div className="max-md:order-2 md:w-1/3">
         <Typography className="text-gray-700 md:text-right">
-          {new Intl.DateTimeFormat('en-US', dateFormatOptions).format(
+          {new Intl.DateTimeFormat(localDate, dateFormatOptions).format(
             startDate
           )}{' '}
           -{' '}
           {currentlyWorkHere
             ? 'Present'
             : endDate
-            ? new Intl.DateTimeFormat('en-US', dateFormatOptions).format(
+            ? new Intl.DateTimeFormat(localDate, dateFormatOptions).format(
                 endDate
               )
             : 'NA'}

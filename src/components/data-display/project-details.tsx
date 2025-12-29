@@ -6,7 +6,6 @@ import { ProjectDetails as ProjectDetailsType } from '@/lib/types';
 import { mergeClasses } from '@/lib/utils';
 import Typography from '@/components/general/typography';
 import Link from '@/components/navigation/link';
-import Tag from '@/components/data-display/tag';
 import Card from '@/components/layout/card';
 import SkillItem from '../general/skill-item';
 

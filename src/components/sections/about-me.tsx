@@ -17,7 +17,7 @@ const AboutMeSection = () => {
   return (
     <Container className="bg-gray-50" id="about">
       <div className="self-center">
-        <Tag label="About me" />
+        <Tag label={data.SECTIONS.aboutme.name} />
       </div>
 
       <div className="flex w-full flex-col justify-between gap-12 md:flex-row">
@@ -38,36 +38,36 @@ const AboutMeSection = () => {
         {/* Content */}
         <div className="flex max-w-xl flex-col gap-6">
           <Typography variant="h3">
-            {data.ABOUT_ME.title}
+            {data.SECTIONS.aboutme.description}
           </Typography>
           <Typography>
-            {data.ABOUT_ME.description[0]}
+            {data.SECTIONS.aboutme.text[0]}
           </Typography>
           <Typography>
-            {data.ABOUT_ME.description[1]}
+            {data.SECTIONS.aboutme.text[1]}
           </Typography>
           <Typography>
-            {data.ABOUT_ME.description[2]}
+            {data.SECTIONS.aboutme.text[2]}
           </Typography>
           <Typography>
-            {data.ABOUT_ME.description[3]}
+            {data.SECTIONS.aboutme.text[3]}
           </Typography>
           <div className="flex flex-col gap-2 md:flex-row md:gap-6">
             <ul className="flex list-inside list-disc flex-col gap-2">
               <Typography component="li">
-                {data.ABOUT_ME.description[4]}
+                {data.SECTIONS.aboutme.text[4]}
               </Typography>
-              <Typography component="li">{data.ABOUT_ME.description[5]}</Typography>
+              <Typography component="li">{data.SECTIONS.aboutme.text[5]}</Typography>
             </ul>
             <ul className="flex list-inside list-disc flex-col gap-2">
-              <Typography component="li">{data.ABOUT_ME.description[6]}</Typography>
-              <Typography component="li">{data.ABOUT_ME.description[7]}</Typography>
+              <Typography component="li">{data.SECTIONS.aboutme.text[6]}</Typography>
+              <Typography component="li">{data.SECTIONS.aboutme.text[7]}</Typography>
             </ul>
           </div>
           <Typography>
-            {data.ABOUT_ME.description[8]}
+            {data.SECTIONS.aboutme.text[8]}
             <br/>
-            {data.ABOUT_ME.description[9]}
+            {data.SECTIONS.aboutme.text[9]}
           </Typography>
         </div>
       </div>

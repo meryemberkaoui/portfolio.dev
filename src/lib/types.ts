@@ -15,6 +15,7 @@ export type ExperienceDetails = {
   currentlyWorkHere?: boolean;
   startDate: Date;
   endDate?: Date;
+  localDate : string;
   summary: string[];
 };
 
@@ -25,7 +26,7 @@ export type ProjectDetails = {
   githubUrl?: string;
   previewImage: string | StaticImageData;
   technologies: TechDetails[];
-  status?: 'in-progress' | 'coming-soon' | 'en cours' | 'à venir' | undefined;
+  status?: 'in-progress' | 'coming-soon' | 'en-cours' | 'a-venir' | undefined;
 };
 
 export type TestimonialDetails = {
@@ -49,4 +50,9 @@ export type Hero = {
   presentation : string;
   languages : string[];
   availability : string;
+};
+
+export type Resume = {
+  file : string;
+  language : string;
 };

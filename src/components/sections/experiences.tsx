@@ -17,10 +17,10 @@ const ExperienceSection = () => {
     <Container className="bg-gray-50">
       <div className="flex flex-col items-center gap-4">
         <div className="self-center">
-          <Tag label="Experience" />
+          <Tag label={data.SECTIONS.experience.name} />
         </div>
         <Typography variant="subtitle" className="max-w-xl text-center">
-          Here is a quick summary of my most recent experiences:
+          {data.SECTIONS.experience.description}
         </Typography>
       </div>
 

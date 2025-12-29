@@ -59,11 +59,10 @@ export const TECHNOLOGIES: TechDetails[] = [
 ];
 
 
-export const EXPERIENCES_SHARED: Omit<ExperienceDetails, 'position' | 'summary'>[] = [
+export const EXPERIENCES_SHARED: Omit<ExperienceDetails, 'position' | 'summary' | 'localDate'>[] = [
   {
     logo: '/images/logos/Capgemini_Logo.svg',
     logoAlt: 'Capgemini logo',
-    
     startDate: new Date(2024, 8),
     endDate: new Date(2025, 7),
   },
@@ -75,7 +74,7 @@ export const EXPERIENCES_SHARED: Omit<ExperienceDetails, 'position' | 'summary'>
   }
 ];
 
-export const PROJECTS_SHARED: Omit<ProjectDetails, 'name' | 'description'>[] = [
+export const PROJECTS_SHARED: Omit<ProjectDetails, 'name' | 'description' | 'status'>[] = [
   {
     githubUrl: 'https://github.com/meryemberkaoui/devpath',
     previewImage: '/images/project-devpath.png',
@@ -86,7 +85,6 @@ export const PROJECTS_SHARED: Omit<ProjectDetails, 'name' | 'description'>[] = [
       TECHNOLOGIES.find(t => t.label === 'Spring Boot'),
       TECHNOLOGIES.find(t => t.label === 'PostgreSQL'),
     ].filter(Boolean) as TechDetails[],
-    status: 'in-progress',
   },
   {
     url: 'https://www.wingie.com',
@@ -114,7 +112,6 @@ export const PROJECTS_SHARED: Omit<ProjectDetails, 'name' | 'description'>[] = [
   {
     previewImage: '/images/project-food.png',
     technologies: [],
-    status: 'coming-soon',
   },
 ];
 
