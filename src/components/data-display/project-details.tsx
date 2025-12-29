@@ -8,6 +8,8 @@ import Typography from '@/components/general/typography';
 import Link from '@/components/navigation/link';
 import Card from '@/components/layout/card';
 import SkillItem from '../general/skill-item';
+import VideoDemo from '../general/video-demo';
+import { data } from 'autoprefixer';
 
 type ProjectDetailsProps = ProjectDetailsType & {
   layoutType: 'default' | 'reverse';
@@ -21,6 +23,7 @@ const ProjectDetails = ({
   githubUrl,
   previewImage,
   status,
+  videoDemo,
   layoutType = 'default',
 }: ProjectDetailsProps) => {
   return (
@@ -55,7 +58,9 @@ const ProjectDetails = ({
           {name} {status && <StatusBadge status={status} />}
 
         </Typography>
-        <Typography>{description}</Typography>
+        <div className="max-w-xl mx-auto">
+          <Typography className="text-left  md:text-justify" >{description}</Typography>
+        </div>
         <div className="flex flex-wrap gap-2">
           {technologies?.map((technology, index) => (
             <SkillItem
@@ -90,6 +95,11 @@ const ProjectDetails = ({
           <GithubIcon />
           
         </Link> }
+        {
+          videoDemo && <VideoDemo videoSrc={videoDemo}/>
+        }
+        
+        
         </div>
       </div>
     </Card>

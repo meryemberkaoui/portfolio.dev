@@ -39,7 +39,7 @@ export const SECTIONS = {
   },
   projects: {
     name: 'Projets',
-    description: 'Quelques projets notables que j\’ai réalisés :',
+    description: 'Quelques projets que j\’ai réalisés :',
   },
   contact: {
     name: 'Contact',
@@ -107,21 +107,22 @@ const FR_TEXTS: { name: string; description: string; status?: 'in-progress' | 'c
   {
     name: 'DevPath',
     description:
-      'Une plateforme reliant les développeurs à des opportunités de projets pour construire leur portfolio. Les utilisateurs peuvent explorer et rejoindre des projets, créer des équipes, partager des ressources et collaborer via des forums, tout en mettant en valeur leurs compétences pour booster leurs opportunités professionnelles.',
+    'Une plateforme mettant en relation des développeurs avec des opportunités de projets afin de leur permettre de construire et valoriser leur portfolio. Les utilisateurs peuvent découvrir et rejoindre des projets, former des équipes, partager des ressources et collaborer via des forums, tout en mettant en avant leurs compétences pour favoriser leur évolution professionnelle.',
     status: 'en-cours'
   },
   {
-    name: 'Hackathon',
-    description:
-      'Une plateforme reliant les développeurs à des opportunités de projets pour construire leur portfolio. Les utilisateurs peuvent explorer et rejoindre des projets, créer des équipes, partager des ressources et collaborer via des forums, tout en mettant en valeur leurs compétences pour booster leurs opportunités professionnelles.',
-  },
-  {
     name: 'Mon Portfolio',
-    description: 'Portfolio personnel',
+    description: 'Mon site portfolio personnel, conçu pour présenter mon profil et mon parcours professionnel, mettant en avant mes compétences techniques et transversales, mes expériences, ainsi que mes projets réalisés, en cours et à venir.',
   },
   {
-    name: 'Site Food',
-    description: 'Un projet de site web sur la nourriture',
+    name: 'SkillStack',
+    description:
+    'Une plateforme RH développée lors d\’un challenge d\’une semaine en équipe de cinq, permettant d\’organiser des équipes de projet, de consulter les profils des employés et de filtrer les candidats selon les compétences, le niveau d\’expérience et la disponibilité.'
+  },
+  
+  {
+    name: 'Ti Bel Plat Kreol',
+    description: 'Une application de commande en ligne à venir pour un restaurant de cuisine créole, permettant aux utilisateurs de parcourir les plats proposés et de passer leurs commandes en ligne.',
     status : 'a-venir'
   },
 ];

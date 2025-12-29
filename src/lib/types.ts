@@ -27,6 +27,7 @@ export type ProjectDetails = {
   previewImage: string | StaticImageData;
   technologies: TechDetails[];
   status?: 'in-progress' | 'coming-soon' | 'en-cours' | 'a-venir' | undefined;
+  videoDemo? : string;
 };
 
 export type TestimonialDetails = {

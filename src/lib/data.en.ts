@@ -109,21 +109,22 @@ const EN_TEXTS: { name: string; description: string; status?: 'in-progress' | 'c
   {
     name: 'DevPath',
     description:
-      'A platform connecting developers with project opportunities to build their portfolios. Users can browse and join projects, create teams, share resources, and collaborate through forums, all while showcasing their skills to boost career opportunities.',
+    'A platform connecting developers with project opportunities to build their portfolios. Users can browse and join projects, form teams, share resources, and collaborate through forums, while showcasing their skills to enhance career opportunities.',
     status : 'in-progress'
   },
   {
-    name: 'Hackathon',
-    description:
-      'A platform connecting developers with project opportunities to build their portfolios. Users can browse and join projects, create teams, share resources, and collaborate through forums, all while showcasing their skills to boost career opportunities.',
-  },
-  {
     name: 'My Portfolio',
-    description: 'Personal portfolio',
+    description: 'My personal portfolio website designed to present my profile and professional background, showcasing my technical and soft skills, work experience, and completed, ongoing, and upcoming projects.',
   },
   {
-    name: 'Food Website',
-    description: 'A food website project',
+    name: 'SkillStack',
+    description:
+    'A human resources management platform developed during a one-week challenge in a team of five, enabling HR teams to organize project teams, browse and manage employee profiles, and search candidates based on criteria such as required skills, experience level (junior/senior), and availability for specific projects.',
+  },
+  
+  {
+    name: 'Ti Bel Plat Kreol',
+    description: 'An upcoming food ordering application for a Creole food business, allowing users to browse Creole dishes and place orders online.',
     status : 'coming-soon',
   },
 ];

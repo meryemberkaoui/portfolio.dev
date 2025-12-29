@@ -80,19 +80,6 @@ export const PROJECTS_SHARED: Omit<ProjectDetails, 'name' | 'description' | 'sta
     ].filter(Boolean) as TechDetails[],
   },
   {
-    url: 'https://www.wingie.com',
-    previewImage: '/images/project-hackathon.png',
-    technologies: [
-      TECHNOLOGIES.find(t => t.label === 'Vue.js'),
-      TECHNOLOGIES.find(t => t.label === 'Spring Boot'),
-      TECHNOLOGIES.find(t => t.label === 'GitLab'),
-      TECHNOLOGIES.find(t => t.label === 'PostgreSQL'),
-      TECHNOLOGIES.find(t => t.label === 'Docker'),
-      TECHNOLOGIES.find(t => t.label === 'Prometheus'),
-      TECHNOLOGIES.find(t => t.label === 'Grafana'),
-    ].filter(Boolean) as TechDetails[],
-  },
-  {
     url: 'https://meryemberkaoui.dev',
     githubUrl: 'https://github.com/meryemberkaoui/portfolio.dev',
     previewImage: '/images/project-portfolio.png',
@@ -103,8 +90,24 @@ export const PROJECTS_SHARED: Omit<ProjectDetails, 'name' | 'description' | 'sta
     ].filter(Boolean) as TechDetails[],
   },
   {
-    previewImage: '/images/project-food.png',
-    technologies: [],
+    previewImage: '/images/project-hackathon.png',
+    technologies: [
+      TECHNOLOGIES.find(t => t.label === 'Vue.js'),
+      TECHNOLOGIES.find(t => t.label === 'Spring Boot'),
+      TECHNOLOGIES.find(t => t.label === 'GitLab'),
+      TECHNOLOGIES.find(t => t.label === 'PostgreSQL'),
+      TECHNOLOGIES.find(t => t.label === 'Docker'),
+      TECHNOLOGIES.find(t => t.label === 'Prometheus'),
+      TECHNOLOGIES.find(t => t.label === 'Grafana'),
+    ].filter(Boolean) as TechDetails[],
+    videoDemo: '/videos/demo-skillstack.mov',
+  },
+  {
+    previewImage: '/images/project-kreol.png',
+    technologies: [
+      TECHNOLOGIES.find(t => t.label === 'Angular'),
+      TECHNOLOGIES.find(t => t.label === 'Spring Boot')
+    ].filter(Boolean) as TechDetails[],
   },
 ];
 
