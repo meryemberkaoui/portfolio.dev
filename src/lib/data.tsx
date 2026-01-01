@@ -36,8 +36,8 @@ export const TECHNOLOGIES: TechDetails[] = [
   {label: 'Jira', logo: '/images/logos/icon-jira.svg', category: 'management' },
   {label: 'Confluence', logo: '/images/logos/icon-confluence.svg', category: 'management' },
   {label: 'Vue.js', logo: '/images/logos/icon-vue.svg', category: 'frontend' },
-  {label: 'Maven', logo: '/images/logos/icon-maven.svg', category: 'devOps' },
-  {label: 'Gradle', logo: '/images/logos/icon-gradle.svg', category: 'devOps' },
+  {label: 'Maven', logo: '/images/logos/icon-maven.svg', category: 'backend' },
+  {label: 'Gradle', logo: '/images/logos/icon-gradle.svg', category: 'backend' },
   {label:'PHP', logo: '/images/logos/icon-php.svg', category: 'backend' },
   {label:'MySQL', logo: '/images/logos/icon-mysql.svg', category: 'database' },
   {label:'JUnit', logo: '/images/logos/icon-junit.svg', category: 'testing' },
@@ -80,7 +80,7 @@ export const PROJECTS_SHARED: Omit<ProjectDetails, 'name' | 'description' | 'sta
     ].filter(Boolean) as TechDetails[],
   },
   {
-    url: 'https://meryemberkaoui.dev',
+    url: '/',
     githubUrl: 'https://github.com/meryemberkaoui/portfolio.dev',
     previewImage: '/images/project-portfolio.png',
     technologies: [

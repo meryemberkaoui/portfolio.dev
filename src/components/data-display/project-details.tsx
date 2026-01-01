@@ -80,7 +80,7 @@ const ProjectDetails = ({
           href={url}
           noCustomization
           className="self-start rounded-lg p-1.5 hover:bg-gray-50 [&_svg]:stroke-gray-500"
-          externalLink
+          externalLink={url !== '/'}
         >
           <ExternalLink />
         </Link> }

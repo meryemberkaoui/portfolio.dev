@@ -7,7 +7,7 @@ export const NAV_LINKS = [
   { label: 'Contact', href: '#contact' },
 ];
 
-export const RESUME: Resume = { file : '/files/meryem-cv-fr.pdf', language : 'fr'};
+export const RESUME: Resume = { file : '/files/cv_meryem_berkaoui.pdf', language : 'fr'};
 
 export const COPYRIGHT = { message : 'Basé sur un projet de Sagar Shah (MIT), reconçu et développé avec ❤️ par Meryem Berkaoui'};
 
