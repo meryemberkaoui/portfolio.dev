@@ -18,7 +18,7 @@
 
 ```bash
 $ git clone https://github.com/meryemberkaoui/portfolio.dev.git
-$ cd portfolio.dev.
+$ cd portfolio.dev
 $ npm install
 $ npm run dev
 ```
