@@ -44,7 +44,7 @@ export const SECTIONS = {
   },
   contact: {
     name: 'Get in touch',
-    description: 'What\’s next? Feel free to reach out to me if you are looking for a developer, have a query, or simply want to connect.',
+    description: 'What’s next? Feel free to reach out to me if you are looking for a developer, have a query, or simply want to connect.',
     text: ['You may also find me on these platforms!'],
   },
 } as const;

@@ -43,7 +43,7 @@ export const SECTIONS = {
   },
   contact: {
     name: 'Contact',
-    description: 'La suite ? N\’hésitez pas à me contacter...',
+    description: 'La suite ? N’hésitez pas à me contacter...',
     text: ['Vous pouvez également me trouver sur ces plateformes !'],
   },
 } as const;

@@ -80,7 +80,7 @@ export const PROJECTS_SHARED: Omit<ProjectDetails, 'name' | 'description' | 'sta
     ].filter(Boolean) as TechDetails[],
   },
   {
-    url: '/',
+    url: '/#top',
     githubUrl: 'https://github.com/meryemberkaoui/portfolio.dev',
     previewImage: '/images/project-portfolio.png',
     technologies: [
