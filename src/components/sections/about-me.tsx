@@ -52,23 +52,6 @@ const AboutMeSection = () => {
           <Typography>
             {data.SECTIONS.aboutme.text[3]}
           </Typography>
-          <div className="flex flex-col gap-2 md:flex-row md:gap-6">
-            <ul className="flex list-inside list-disc flex-col gap-2">
-              <Typography component="li">
-                {data.SECTIONS.aboutme.text[4]}
-              </Typography>
-              <Typography component="li">{data.SECTIONS.aboutme.text[5]}</Typography>
-            </ul>
-            <ul className="flex list-inside list-disc flex-col gap-2">
-              <Typography component="li">{data.SECTIONS.aboutme.text[6]}</Typography>
-              <Typography component="li">{data.SECTIONS.aboutme.text[7]}</Typography>
-            </ul>
-          </div>
-          <Typography>
-            {data.SECTIONS.aboutme.text[8]}
-            <br/>
-            {data.SECTIONS.aboutme.text[9]}
-          </Typography>
         </div>
       </div>
     </Container>

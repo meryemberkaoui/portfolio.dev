@@ -8,7 +8,7 @@ export const NAV_LINKS = [
   { label: 'Contact', href: '#contact' },
 ];
 
-export const RESUME: Resume = { file : '/files/resume_meryem_berkaoui.pdf', language : 'en'};
+export const RESUME: Resume = { file : '/files/Meryem_Berkaoui_CV__.pdf', language : 'en'};
 
 export const COPYRIGHT = { message : 'Based on a project by Sagar Shah (MIT), redesigned and coded with ❤️️ by Meryem Berkaoui'};
 
@@ -18,14 +18,8 @@ export const SECTIONS = {
     name : 'About me',
     description : 'Curious about me? Here you have it:',
     text : [
-      'I\'m a passionate Full Stack Developer specializing in Angular and Spring Boot, with a strong interest in bringing both the technical and visual aspects of digital products to life. User experience, clean architecture, and writing clear, readable, and high-performance code are things I deeply care about.',
-      'I began my professional journey as a software developer apprentice in 2023, where I had the opportunity to contribute to several stimulating projects alongside passionate and supportive teams. This experience allowed me to enter and better understand the professional world, learning how to collaborate, share knowledge, and especially how to continuously grow, both technically and personally.',
+      'I began my professional journey as a software developer apprentice in 2023, where I had the opportunity to contribute to several stimulating projects alongside passionate and supportive teams. This experience allowed me to explore the professional world, share knowledge, and grow both technically and personally.',
       'Outside of development, I enjoy staying active through regular sports, long walks, and discovering beautiful natural landscapes. I\'ve also recently developed a passion for cooking. I love recreating recipes, baking cakes, and sharing them with others.',
-      'Some quick bits about me :',
-      'Master\'s degree in Software Engineering',
-      'Rigorous and detail-oriented',
-      'Avid learner',
-      'Enjoy connecting and collaborating with people',
       'After earning my Master\'s degree in Software Engineering, I am now seeking new challenges and opportunities to build innovative applications using modern technologies.',
       'If you are looking for a motivated developer with strong fundamentals, a genuine commitment to continuous learning, and someone ready to take on new responsibilities, I would be happy to discuss how I can contribute to your team. 😉'
     ]
@@ -52,7 +46,7 @@ export const SECTIONS = {
 export const HERO: Hero = {
 
   hi :'Hi, I\'m Meryem',
-  presentation : 'I\'m a full-Stack developer with 2 years of work-study experience, committed to delivering high-quality solutions. I\'m eager to leverage my technical skills in impactful projects, grow within a dynamic and collaborative environment, and contribute to innovative, high-value initiatives.',
+  presentation : 'I\'m a full-Stack developer with professional experience. Seeking to expand my expertise, learn new technologies, and contribute to high-impact projects. ',
   languages : ['SPOKEN LANGUAGES','French', 'English', 'Arabic'],
   availability : 'Ready to join your team'
 }
@@ -71,29 +65,24 @@ export const SOFT_SKILLS: SoftSkill[] = [
 
 const EN_SUMMARIES: { position: string, sum: string[]}[] = [
   {
-    position: 'Software developer - Angular / Spring Boot Project',
+    position: 'Software Engineer (Angular & Spring Boot) ',
     sum : [
-    'Developed and maintained backend services using Spring Boot',
-    'Built and maintained frontend components using Angular',
-    'Implemented and managed OJS storage',
-    'Estimated feature complexity and contributed to sprint planning',
-    'Designed, implemented, and maintained CI/CD pipelines using GitLab',
-    'Participated in code reviews and quality checks using SonarQube and Semgrep',
-    'Wrote and validated unit tests with JUnit and Mockito',
-    'Presented product demonstrations to clients and stakeholders',
-    'Worked in a Scrum environment, supported by an Agile coach',
+      'Developed backend microservices using Spring Boot, including RESTful APIs',
+      'Built and maintained responsive frontend components using Angular',
+      'Implemented file upload and download workflows using AWS S3 cloud object storage within Spring Boot microservices',
+      'Participated in Agile SCRUM ceremonies (stand-ups, sprint planning, retrospectives) and estimated user story complexity using Jira',
+      'Wrote clear technical and functional documentation for features using Confluence',
+      'Ensured application reliability through code reviews, unit testing, and log monitoring using JUnit, Mockito, SonarQube',
   ]
   },
   {
-    position : 'Software developer - Number Portability Server Project',
+    position : 'Software Engineer (Java)',
     sum: [
-    'Developed backend features using Java and Python',
-    'Wrote and optimized PostgreSQL queries',
-    'Conducted integration tests and validated results using HP-ALM',
-    'Developed 75 automated functional tests using JMeter, building a library of reusable test components',
-    'Drafted and updated specifications delivered to clients',
-    'Implemented and managed CI/CD pipelines using Jenkins',
-    'Worked in a V-model development cycle',
+      'Developed backend features using Java and Python, delivering fully functional modules',
+      'Wrote and optimized PostgreSQL queries to ensure efficient data processing',
+      'Conducted integration tests using HP-ALM, identified and resolved defects to validate feature functionality',
+      'Independently developed and automated 75+ functional UI tests using JMeter, creating a reusable library of test scenarios executed periodically with automated reporting',
+      'Performed deployments using Jenkins and TortoiseSVN, managing commits and automated processes'
   ]
   }
 ];

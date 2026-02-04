@@ -20,19 +20,34 @@ const ExperienceDetails = ({
   localDate
 }: ExperienceDetailsProps) => {
   return (
-    <Card className="mx-auto flex w-full flex-col justify-between gap-6 p-8 md:flex-row md:gap-8">
-      <div className=" relative max-md:order-1 md:w-1/4">
+    <Card className="mx-auto flex w-full 
+    flex-col justify-between gap-6 p-8 md:flex-row md:gap-9">
+      <div className="relative md:w-[120px] md:flex-shrink-0">
         <ImageWrapper
           src={logo}
           srcForDarkMode={darkModeLogo}
           alt={logoAlt}
-          className="max-w-[120px]"
         />
       </div>
-      <div className="md:w-[90%] flex flex-col gap-4 max-md:order-3">
-        <Typography variant="subtitle" className="font-semibold text-gray-900">
-          {position}
-        </Typography>
+      <div className="flex flex-col gap-4 flex-1">
+        <div className="flex justify-between items-baseline gap-4">
+          <Typography variant="subtitle" className="font-semibold text-gray-900">
+            {position}
+          </Typography>
+          <Typography className="text-gray-700 whitespace-nowrap">
+            {new Intl.DateTimeFormat(localDate, dateFormatOptions).format(
+              startDate
+            )}{' '}
+            -{' '}
+            {currentlyWorkHere
+              ? 'Present'
+              : endDate
+              ? new Intl.DateTimeFormat(localDate, dateFormatOptions).format(
+                  endDate
+                )
+              : 'NA'}
+          </Typography>
+        </div>
         <ul className="flex list-disc flex-col gap-2 md:gap-1">
           {summary?.map((sentence, index) => (
             <Typography component="li" key={index}>
@@ -40,21 +55,6 @@ const ExperienceDetails = ({
             </Typography>
           ))}
         </ul>
-      </div>
-      <div className="max-md:order-2 md:w-1/3">
-        <Typography className="text-gray-700 md:text-right">
-          {new Intl.DateTimeFormat(localDate, dateFormatOptions).format(
-            startDate
-          )}{' '}
-          -{' '}
-          {currentlyWorkHere
-            ? 'Present'
-            : endDate
-            ? new Intl.DateTimeFormat(localDate, dateFormatOptions).format(
-                endDate
-              )
-            : 'NA'}
-        </Typography>
       </div>
     </Card>
   );

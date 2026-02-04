@@ -69,7 +69,6 @@ const ProjectDetails = ({
               logo={technology.logo}
               darkModeLogo={technology.darkModeLogo}
               className="text-xs px-1.3 py-1"
-
             />
           ))}
         </div>

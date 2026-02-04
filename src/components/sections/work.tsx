@@ -8,7 +8,6 @@ import Container from '@/components/layout/container';
 import { useLanguage } from '@/app/language-context';
 import * as EN from '@/lib/data.en';
 import * as FR from '@/lib/data.fr';
-import { idText } from 'typescript';
 
 const WorkSection = () => {
   const { language } = useLanguage();

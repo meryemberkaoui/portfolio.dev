@@ -7,7 +7,7 @@ export const NAV_LINKS = [
   { label: 'Contact', href: '#contact' },
 ];
 
-export const RESUME: Resume = { file : '/files/cv_meryem_berkaoui.pdf', language : 'fr'};
+export const RESUME: Resume = { file : '/files/Meryem_Berkaoui_CV_Full_Stack.pdf', language : 'fr'};
 
 export const COPYRIGHT = { message : 'Basé sur un projet de Sagar Shah (MIT), reconçu et développé avec ❤️ par Meryem Berkaoui'};
 
@@ -17,16 +17,10 @@ export const SECTIONS = {
     name : 'À propos de moi',
     description : 'Vous voulez en savoir plus sur moi ? Voici un aperçu :',
     text : [
-      'Je suis une développeuse Full Stack passionnée, spécialisée dans Angular et Spring Boot, avec un vif intérêt pour donner vie à la fois aux aspects techniques et visuels des produits numériques. L\'expérience utilisateur, une architecture propre et l\'écriture de code clair, lisible et performant sont des sujets qui me tiennent particulièrement à cœur.',
-      'J\'ai débuté mon parcours professionnel en tant qu\'apprentie développeuse logicielle en 2023, où j\'ai eu l\'opportunité de contribuer à plusieurs projets stimulants aux côtés d\'équipes passionnées et bienveillantes. Cette expérience m\'a permis d\'entrer et de mieux comprendre le monde professionnel, d\'apprendre à collaborer, à partager les connaissances et surtout à me construire continuellement, tant sur le plan technique qu\'humain.',
+      'J\'ai débuté mon parcours professionnel en tant qu\'apprentie développeuse logicielle en 2023, où j\'ai eu l\'opportunité de contribuer à plusieurs projets stimulants aux côtés d\'équipes passionnées. Cette expérience m\'a permis de découvrir le monde professionnel, à me construire continuellement, tant sur le plan technique qu\'humain.',
       'En dehors du développement, j\'aime rester active grâce au sport régulier, aux longues balades et à la découverte de beaux paysages naturels. Je me suis aussi récemment découvert une passion pour la cuisine. J\'adore recréer des recettes, pâtisser des gâteaux et les partager.',
-      'Quelques infos rapides à mon sujet :',
-      'Diplômée d\'un Master en Génie Logiciel',
-      'Rigoureuse',
-      'Une appétence marquée pour l\'apprentissage',
-      'J\'apprécie le contact et la collaboration',
       'Après l\'obtention de mon Master en Génie Logiciel, je suis maintenant à la recherche de nouveaux défis et opportunités pour construire des applications innovantes avec des technologies modernes.',
-      'Si vous cherchez une développeuse motivée, avec de solides bases, un engagement sincère dans l\'apprentissage continu, et prête à prendre de nouvelles responsabilités, je serais ravie d\'échanger sur la façon dont je pourrais contribuer à votre équipe. 😉'
+      'Si vous cherchez une développeuse motivée, un engagement sincère dans l\'apprentissage continu, et prête à prendre de nouvelles responsabilités, je serais ravie d\'échanger sur la façon dont je pourrais contribuer à votre équipe. 😉'
     ]
   },
   skills: {
@@ -49,8 +43,8 @@ export const SECTIONS = {
 } as const;
 
 export const HERO: Hero = {
-  hi :'Salut, c\'est Meryem',
-  presentation : 'Développeuse Full-Stack motivée et rigoureuse avec 2 ans d\'expérience en alternance, je suis engagée et orientée qualité. Je souhaite mettre mon expertise technique au service de vos projets, évoluer dans un environnement stimulant et collaboratif, et contribuer à des projets innovants à fort impact.',
+  hi :'Salut, je suis Meryem',
+  presentation : 'Je suis développeuse full-stack avec une expérience professionnelle, enthousiaste à l\'idée d\'apprendre de nouvelles technologies et de contribuer à des projets à fort impact.',
   languages : ['LANGUES PARLÉES', 'Français', 'Anglais', 'Arabe'],
   availability : 'Prête à rejoindre votre équipe'
 }
@@ -68,29 +62,25 @@ export const SOFT_SKILLS: SoftSkill[] = [
 
 const FR_SUMMARIES: { position: string, sum: string[]}[] = [
   {
-    position : 'Développeuse logiciel – Angular / Spring Boot',
+    position : 'Développeuse Logicielle (Angular & Spring Boot)',
     sum :[
-    'Concevoir, développer et maintenir des services backend en Spring Boot',
-    'Développer des interfaces frontend en Angular, en lien avec les équipes métier',
-    'Gérer les mécanismes de stockage OJS',
-    'Participer à l\’estimation des charges et à la planification des sprints',
-    'Mettre en place et maintenir des pipelines CI/CD sous GitLab',
-    'Contribuer aux revues de code et à l\’amélioration continue de la qualité (SonarQube, Semgrep)',
-    'Développer et maintenir des tests unitaires avec JUnit et Mockito',
-    'Présenter les évolutions produit aux clients et parties prenantes',
-    'Évoluer dans un cadre Agile Scrum, avec accompagnement d\’un coach Agile',
+      'Développer des microservices backend avec Spring Boot et des APIs RESTful',
+      'Concevoir des interfaces frontend responsive avec Angular',
+      'Mettre en place des workflows de fichiers via AWS S3',
+      'Travailler en mode Agile SCRUM (daily, sprint planning, rétrospectives) et estimer la complexité des User Stories via Jira',
+      'Rédiger de la documentation technique et fonctionnelle sur Confluence',
+      'Assurer la qualité du code par la revue de code, les tests unitaires (JUnit, Mockito) et le monitoring des logs'
   ]
   },
   {
-    position : 'Développeuse logiciel – Projet Serveur Portabilité des Numéros',
+    position : 'Développeuse Logicielle (Java)',
     sum : [
-    'Intervenir dans un cycle de développement en V',
-    'Développer des fonctionnalités backend en Java et Python',
-    'Concevoir et optimiser des requêtes PostgreSQL',
-    'Réaliser des tests d\’intégration et assurer la validation via HP ALM',
-    'Mettre en œuvre 75 tests fonctionnels automatisés avec JMeter, en constituant une bibliothèque de composants réutilisables',
-    'Rédiger et maintenir les spécifications fonctionnelles destinées aux clients',
-    'Mettre en place et administrer des pipelines CI/CD avec Jenkins',
+      'Développer des fonctionnalités backend en Java et Python',
+      'Écrire et optimiser des requêtes PostgreSQL',
+      'Conduire des tests d\'intégration avec HP-ALM, identifier et corriger des anomalies pour valider les fonctionnalités',
+      'Développer et automatiser plus de 75 tests fonctionnels UI avec JMeter, créer une bibliothèque de scénarios de tests réutilisables avec reporting automatisé',
+      'Effectuer des déploiements avec Jenkins et TortoiseSVN, gérer les commits',
+      'Documenter les fonctionnalités ajoutées ou modifiées'
   ]
   }
 ];
